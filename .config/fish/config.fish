@@ -1,5 +1,5 @@
 source $HOME/.config/fish/functions/variables.fish
-source $HOME/.config/fish/functions/alias.fish
+source $HOME/.config/fish/functions/abbr.fish
 source $HOME/.config/fish/functions/greeting.fish
 
 function fish_prompt

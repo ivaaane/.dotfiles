@@ -7,6 +7,8 @@ Plug('rebelot/kanagawa.nvim')
 Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('windwp/nvim-autopairs')
+Plug('lukas-reineke/indent-blankline.nvim')
+Plug('pocco81/true-zen.nvim')
 vim.call('plug#end')
 
 -- options
@@ -27,6 +29,7 @@ vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'NONE' })
 -- require
 require('lualine').setup()
 require('nvim-autopairs').setup({})
+require('ibl').setup()
 --require('pona').setup()
 
 -- disable arrow keys
@@ -38,3 +41,8 @@ vim.api.nvim_set_keymap('i', '<Up>', '<Nop>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<Down>', '<Nop>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<Left>', '<Nop>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<Right>', '<Nop>', { noremap = true, silent = true })
+
+-- keymappin'
+vim.api.nvim_set_keymap('i', '<Tab>', '<Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Tab>', '<Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-i>', '<Tab>', { noremap = true, silent = true })
