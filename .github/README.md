@@ -5,7 +5,8 @@ Uses:
 - Fish
 - Neovim
 - Firefox
+- Polybar
 - Picom
-- i3status
+- Newsboat
 
 ![](screenshot.png)

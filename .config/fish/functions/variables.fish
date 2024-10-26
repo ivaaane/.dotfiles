@@ -23,6 +23,12 @@ set -gx HISTFILE ~/.config/fish/fish_history
 set -g HISTSIZE 50
 set -g HISTFILESIZE 50
 
+# ibus
+set -gx GTK_IM_MODULE ibus
+set -gx QT_IM_MODULE ibus
+set -gx XMODIFIERS "@im=ibus"
+set -gx GLFW_IM_MODULE ibus
+
 if not status is-interactive
 	return
 end

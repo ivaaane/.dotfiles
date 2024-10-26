@@ -1,0 +1,7 @@
+$reye = chop($eyes);
+
+$the_cow = <<"EOC";
+   $thoughts   ^--^
+    $thoughts ($eyes $reye )_/
+       |--|--|
+EOC

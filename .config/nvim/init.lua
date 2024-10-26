@@ -8,7 +8,7 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('windwp/nvim-autopairs')
 Plug('lukas-reineke/indent-blankline.nvim')
-Plug('pocco81/true-zen.nvim')
+Plug 'norcalli/nvim-colorizer.lua'
 vim.call('plug#end')
 
 -- options
@@ -23,14 +23,13 @@ vim.cmd('colorscheme kanagawa')
 
 -- transparent background
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'LineNr', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'LineNr', { bg = 'NONE', fg = 'gray' })
 vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'NONE' })
 
 -- require
 require('lualine').setup()
 require('nvim-autopairs').setup({})
 require('ibl').setup()
---require('pona').setup()
 
 -- disable arrow keys
 vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })

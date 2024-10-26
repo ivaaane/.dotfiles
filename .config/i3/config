@@ -8,9 +8,10 @@ set $mod Mod4
 workspace_layout default
 
 # Window and Floating Settings #
-for_window [class=".*"] border pixel 1
-gaps inner 10
-gaps outer 20
+for_window [class=".*"] border pixel 0
+gaps inner 12
+gaps outer 10
+gaps bottom -6
 floating_modifier $mod
 focus_follows_mouse no
 
@@ -21,8 +22,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Keybinding help and system controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -51,22 +52,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
-bindsym $mod+d exec --no-startup-id /usr/bin/vesktop
 bindsym Print exec --no-startup-id scrot ~/downloads/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
-
-# i3blocks #
-bar {
-    font pango: SourceCodePro 10
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
-    position bottom
-	mode dock
-    tray_padding 0
-    workspace_buttons no
-    colors {
-        background #1F1F28
-        statusline $white
-    }
-}
 
 # Autostart Applications #
 exec --no-startup-id xrandr --output eDP-1 --mode 1600x900
@@ -74,10 +60,10 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id setxkbmap es -option caps:ctrl_modifier
 exec --no-startup-id ~/.screenlayout/monitor.sh
-exec --no-startup-id sleep 1 && feh --bg-fill ~/.local/share/cottage.jpg
+exec --no-startup-id sleep 1 && feh --bg-fill ~/.local/share/wallpapers/tree.png
 exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id /usr/bin/dunst
-exec --no-startup-id kitty
+exec --no-startup-id polybar
 
 # Floating Window Rules #
 for_window [class="Yad"] floating enable
@@ -91,9 +77,11 @@ for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
 
 # Color Settings #
-set $white #DCD7BADD
+set $white #DCD7BA
 set $black #00000000
 
 client.focused $white $white $white $white $white
 client.unfocused $black $black $black $black $black
 client.focused_inactive $black $black $black $black $black
+client.placeholder $black $black $black $black $black
+client.background $black $black $black $black $black

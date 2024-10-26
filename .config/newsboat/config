@@ -1,0 +1,6 @@
+refresh-on-startup		yes
+cleanup-on-quit			yes
+confirm-mark-feed-read 	no
+
+color info white black
+color listfocus black blue
