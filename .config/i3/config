@@ -22,8 +22,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Keybinding help and system controls
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -43,10 +41,10 @@ bindsym $mod+Shift+Up resize grow height 10 px
 bindsym $mod+Shift+Down resize shrink height 10 px
 
 # Multimedia keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_up
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_down
-bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh volume_mute
-bindsym XF86AudioMicMute exec amixer sset Capture toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 1%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 1%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
@@ -63,7 +61,9 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id sleep 1 && feh --bg-fill ~/.local/share/wallpapers/tree.png
 exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id /usr/bin/dunst
+exec --no-startup-id unclutter --timeout 2 --start-hidden &
 exec --no-startup-id polybar
+exec --no-startup-id oneko
 
 # Floating Window Rules #
 for_window [class="Yad"] floating enable
