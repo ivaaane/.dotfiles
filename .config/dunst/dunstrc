@@ -22,7 +22,7 @@
     transparency = 16
 
     frame_width = 0
-    frame_color = "#1e272b"
+    frame_color = "#201d28"
     separator_color = auto
 
     idle_threshold = 0

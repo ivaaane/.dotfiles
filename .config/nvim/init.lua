@@ -8,7 +8,7 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('windwp/nvim-autopairs')
 Plug('lukas-reineke/indent-blankline.nvim')
-Plug 'norcalli/nvim-colorizer.lua'
+Plug('ellisonleao/gruvbox.nvim')
 vim.call('plug#end')
 
 -- options
@@ -19,7 +19,7 @@ vim.opt.expandtab = false
 vim.opt.pumheight = 10
 
 -- colors
-vim.cmd('colorscheme kanagawa')
+vim.cmd('colorscheme gruvbox')
 
 -- transparent background
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })

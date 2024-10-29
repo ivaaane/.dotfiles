@@ -1,21 +1,16 @@
-# Font settings
 font pango: Noto Sans Regular 10
-
-# Mod key
 set $mod Mod4
-
-# Workspace Layout #
 workspace_layout default
 
-# Window and Floating Settings #
+# Window settings
 for_window [class=".*"] border pixel 0
-gaps inner 12
+gaps inner 20
 gaps outer 10
-gaps bottom -6
+gaps top -20
 floating_modifier $mod
 focus_follows_mouse no
 
-# Terminal and application shortcuts
+# Application shortcuts
 bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+q kill
 bindsym $mod+Shift+c reload
@@ -58,7 +53,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id setxkbmap es -option caps:ctrl_modifier
 exec --no-startup-id ~/.screenlayout/monitor.sh
-exec --no-startup-id sleep 1 && feh --bg-fill ~/.local/share/wallpapers/tree.png
+exec --no-startup-id sleep 1 && feh --bg-fill ~/.local/share/wallpapers/valley.png
 exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id unclutter --timeout 2 --start-hidden &
