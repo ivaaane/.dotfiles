@@ -4,6 +4,7 @@ alias ls='eza -T --icons --group-directories-first -I ".git" --git-ignore -L2'
 alias clear='printf "\033[3J\033[H\033[2J"'
 alias rmd='rm -rf'
 alias icat='kitten icat --align left'
+alias neofetch='fastfetch'
 
 alias firefox='firefox & disown'
 alias discord='vesktop & disown'

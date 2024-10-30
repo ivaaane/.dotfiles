@@ -6,6 +6,6 @@ function fish_prompt
 	printf '\e[1 q'
 	printf "\n%s %s>%s " \
 		(set_color yellow)(prompt_pwd) \
-		(set_color magenta) \
+		(set_color green) \
 		(set_color normal)
 end

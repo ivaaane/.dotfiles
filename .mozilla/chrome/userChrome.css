@@ -45,8 +45,8 @@
     /* Comment the color theme you don't want to use */
 
     /* Dark Theme Colors */
-    --window-colour:               #201d28;
-    --secondary-colour:            #201d28;
+    --window-colour:               transparent;
+    --secondary-colour:            transparent;
     --inverted-colour:             #FFFFFF;
 
     /* Light Theme Colors

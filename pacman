@@ -486,6 +486,7 @@ libxt 1.3.0-2
 libxtst 1.2.5-1
 libxv 1.0.12-2
 libxxf86vm 1.1.5-2
+libyaml 0.2.5-3
 libyuv r2426+464c51a03-1
 licenses 20240728-1
 lightdm 1:1.32.0-6
@@ -500,6 +501,7 @@ llvm-libs 18.1.8-4
 lm_sensors 1:3.6.0.r41.g31d1f125-3
 lmdb 0.9.33-1
 logrotate 3.22.0-1
+lolcat 100.0.1-3
 love 11.5-1
 lsb-release 2.0.r53.a86f885-2
 lsscsi 0.32-2
@@ -537,7 +539,6 @@ mtools 1:4.0.45-1
 mujs 1.3.5-1
 nano 8.2-1
 ncurses 6.5-3
-neofetch 7.1.0-2
 neon 0.33.0-1
 neovim 0.10.2-2
 netctl 1.29-2
@@ -706,6 +707,13 @@ rpcbind 1.2.7-1
 rtkit 0.13-3
 rtmpdump 1:2.4.r105.6f6bb13-1
 rubberband 3.3.0-2
+ruby 3.3.5-2
+ruby-erb 4.0.4-6
+ruby-manpages 0.6.1-6
+ruby-optimist 3.1.0-3
+ruby-paint 2.3.0-4
+ruby-rdoc 6.6.3.1-1
+rubygems 3.5.16-1
 rust 1:1.82.0-2
 rust-analyzer 20241021-1
 rust-src 1:1.82.0-2
