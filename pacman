@@ -24,6 +24,7 @@ archlinux-keyring 20241015-1
 archlinux-xdg-menu 0.7.6.6-2
 argon2 20190702-6
 aria2 1.37.0-1
+asciiquarium 1.1-7
 aspell 0.60.8.1-2
 aspell-en 2020.12.07-2
 at-spi2-core 2.54.0-2
@@ -55,6 +56,7 @@ ca-certificates-utils 20240618-1
 cairo 1.18.2-2
 cairomm-1.16 1.18.0-1
 cantarell-fonts 1:0.303.1-2
+cbonsai 1.3.1-3
 chafa 1.14.2-2
 chromaprint 1.5.1-8
 cifs-utils 7.1-1
@@ -605,6 +607,7 @@ pcre2 10.44-1
 pcsclite 2.3.0-1
 perl 5.40.0-1
 perl-clone 0.47-1
+perl-curses 1.45-2
 perl-encode-locale 1.05-13
 perl-error 0.17029-7
 perl-file-listing 6.16-4
@@ -621,6 +624,7 @@ perl-libwww 6.77-2
 perl-lwp-mediatypes 6.04-6
 perl-mailtools 2.21-9
 perl-net-http 6.23-4
+perl-term-animation 2.6-12
 perl-timedate 2.33-7
 perl-try-tiny 0.32-2
 perl-uri 5.29-1
