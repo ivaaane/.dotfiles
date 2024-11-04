@@ -1,8 +1,9 @@
+# a!
 font pango: Noto Sans Regular 10
 set $mod Mod4
 workspace_layout default
 
-# Window settings
+# Window
 for_window [class=".*"] border pixel 0
 gaps inner 20
 gaps outer 10
@@ -10,13 +11,11 @@ gaps top -20
 floating_modifier $mod
 focus_follows_mouse no
 
-# Application shortcuts
+# Keybindings
 bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-
-# Keybinding help and system controls
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -35,8 +34,6 @@ bindsym $mod+Shift+Left resize shrink width 10 px
 bindsym $mod+Shift+Right resize grow width 10 px
 bindsym $mod+Shift+Up resize grow height 10 px
 bindsym $mod+Shift+Down resize shrink height 10 px
-
-# Multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 1%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 1%-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
@@ -48,7 +45,7 @@ bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
 bindsym Print exec --no-startup-id scrot ~/downloads/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
 
-# Autostart Applications #
+# Autostart
 exec --no-startup-id xrandr --output eDP-1 --mode 1600x900
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
@@ -60,24 +57,3 @@ exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id unclutter --timeout 2 --start-hidden &
 exec --no-startup-id polybar
 exec --no-startup-id oneko
-
-# Floating Window Rules #
-for_window [class="Yad"] floating enable
-for_window [class="Galculator"] floating enable
-for_window [class="Blueberry.py"] floating enable
-for_window [class="Xsane"] floating enable
-for_window [class="Pavucontrol"] floating enable
-for_window [class="qt5ct"] floating enable
-for_window [class="Bluetooth-sendto"] floating enable
-for_window [class="Pamac-manager"] floating enable
-for_window [window_role="About"] floating enable
-
-# Color Settings #
-set $white #DCD7BA
-set $black #00000000
-
-client.focused $white $white $white $white $white
-client.unfocused $black $black $black $black $black
-client.focused_inactive $black $black $black $black $black
-client.placeholder $black $black $black $black $black
-client.background $black $black $black $black $black

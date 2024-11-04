@@ -33,21 +33,21 @@ require('lualine').setup()
 require('nvim-autopairs').setup({})
 require('ibl').setup()
 require("zen-mode").setup({
-	window = {
+    window = {
         height = function()
             return vim.api.nvim_win_get_height(0) - 2
         end,
         width = 0.5,
-		options = {
-			number = false,
-		},
+        options = {
+            number = false,
+        },
     },
-	plugins = {
-		kitty = {
+    plugins = {
+        kitty = {
             enabled = true,
-			font = "+3",
-		}
-	},
+            font = "+3",
+        }
+    },
 })
 
 -- keymappin'
