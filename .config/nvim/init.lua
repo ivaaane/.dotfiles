@@ -9,6 +9,10 @@ Plug('windwp/nvim-autopairs')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('ellisonleao/gruvbox.nvim')
 Plug('folke/zen-mode.nvim')
+Plug('nvim-neo-tree/neo-tree.nvim')
+Plug('nvim-lua/plenary.nvim')
+Plug('nvim-tree/nvim-web-devicons')
+Plug('MunifTanjim/nui.nvim')
 vim.call('plug#end')
 
 -- options
@@ -32,6 +36,7 @@ vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'NONE' })
 require('lualine').setup()
 require('nvim-autopairs').setup({})
 require('ibl').setup()
+require('neo-tree').setup({})
 require("zen-mode").setup({
     window = {
         height = function()
@@ -67,3 +72,4 @@ vim.api.nvim_set_keymap('n', '<C-l>', 'w', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'z', 'z=', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 't', ':Neotree<CR>', { noremap = true, silent = true })

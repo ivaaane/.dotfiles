@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=  pixelorama
+Comment=Open source pixel art editor
+Exec=/usr/bin/Pixelorama-Linux-64bit/Pixelorama.x86_64
+Icon=
+Categories=Art;

@@ -79,8 +79,6 @@ i3-wm
 i3blocks
 i3lock
 i3status
-ibus
-ibus-table
 inetutils
 intel-ucode
 iptables-nft
@@ -112,9 +110,11 @@ minetest
 modemmanager
 mono
 mono-msbuild
+mplayer
 mpv
 mtools
 nano
+neofetch
 neovim
 netctl
 network-manager-applet
@@ -169,6 +169,7 @@ scrot
 sg3_utils
 smartmontools
 sof-firmware
+steam
 subversion
 sudo
 sysfsutils

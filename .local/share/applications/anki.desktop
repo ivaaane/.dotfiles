@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=󱟱  anki
+Comment=Spaced repetition flashcard program
+Exec=anki
+Icon=󱟱
+Categories=Education;
