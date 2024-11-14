@@ -43,7 +43,8 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
-bindsym $mod+w exec --no-startup-id rofi -show drun
+bindsym $mod+w exec --no-startup-id firefox
+bindsym $mod+e exec --no-startup-id ~/.config/rofi/launch.sh
 bindsym Print exec --no-startup-id scrot ~/downloads/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
 
 # Autostart
@@ -57,4 +58,3 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id unclutter --timeout 2 --start-hidden &
 exec --no-startup-id polybar
-exec --no-startup-id oneko
