@@ -3,9 +3,9 @@
 }
 
  :root {
-    --window-colour:               transparent;
-    --secondary-colour:            transparent;
-    --inverted-colour:             #FFFFFF;
+    --window-colour:               #1e1e2e;
+    --secondary-colour:            #1e1e2e;
+    --inverted-colour:             #cdd6f4;
 
     --uc-identity-color-blue:      #2D4F67;
     --uc-identity-color-turquoise: #7E9CD8;

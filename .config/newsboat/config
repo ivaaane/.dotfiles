@@ -1,6 +1,12 @@
-refresh-on-startup		yes
-cleanup-on-quit			yes
-confirm-mark-feed-read 	no
+include ~/.config/newsboat/dark
 
-color info white black
-color listfocus black blue
+auto-reload yes
+max-items 100
+
+highlight feedlist "\\(Youtube\\) .*" red
+highlight feedlist "\\(Reddit\\) .*" green
+highlight feedlist "\\(Podcast\\) .*" magenta
+highlight feedlist "\\(Blog\\) .*" yellow
+
+browser firefox
+macro m set browser "mpv %u"; open-in-browser ; set browser "firefox %u"

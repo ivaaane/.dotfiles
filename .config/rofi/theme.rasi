@@ -12,9 +12,8 @@ configuration {
   padding: 0;
   spacing: 0;
 
-  bg: #281d28dd;
-  fg: #fbf1c7;
-  select: #fe8019;
+  bg: #1e1e2ebb;
+  fg: #f38ba8;
 
   background-color: transparent;
   text-color: @fg;
@@ -22,7 +21,7 @@ configuration {
 
 window {
     fullscreen: true;
-    padding: 25% 33%;
+    padding: 33% 33%;
     background-color: @bg;
 }
 
@@ -59,5 +58,6 @@ element-text {
 }
 
 element-text selected {
-  text-color: @select;
+  text-color: @bg;
+  background-color: @fg;
 }

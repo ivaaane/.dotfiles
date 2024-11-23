@@ -10,6 +10,7 @@ apps_arr=(
     "  thunar"
     "󰺵  retroarch"
     "  oneko"
+    "󰏫  pinta"
 )
 
 apps=$(printf '%s\n' "${apps_arr[@]}" | sort)

@@ -13,6 +13,7 @@ Plug('nvim-neo-tree/neo-tree.nvim')
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('MunifTanjim/nui.nvim')
+Plug('catppuccin/nvim')
 vim.call('plug#end')
 
 -- options
@@ -24,19 +25,12 @@ vim.opt.pumheight = 10
 vim.opt.linebreak = true
 vim.opt.spelllang = "es"
 
--- colors
-vim.cmd('colorscheme gruvbox')
-
--- transparent background
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'LineNr', { bg = 'NONE', fg = 'gray' })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'NONE' })
-
 -- require
 require('lualine').setup()
 require('nvim-autopairs').setup({})
 require('ibl').setup()
 require('neo-tree').setup({})
+require('catppuccin').setup({ flavour = 'mocha' })
 require("zen-mode").setup({
     window = {
         height = function()
@@ -54,6 +48,12 @@ require("zen-mode").setup({
         }
     },
 })
+
+-- colors
+vim.cmd('colorscheme catppuccin')
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'LineNr', { bg = 'NONE', fg = 'gray' })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'NONE' })
 
 -- keymappin'
 vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })

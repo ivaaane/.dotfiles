@@ -1,7 +1,7 @@
 # places
 set -gx HOME $HOME
 set -gx PATH $PATH /bin /usr/bin $HOME/.local/bin $HOME/.cargo/bin
-set -gx XDG_DATA_DIRS ~/.local/share/applications
+set -gx XDG_DATA_DIRS /usr/local/share:/usr/share
 
 # applications
 set -gx EDITOR nvim
