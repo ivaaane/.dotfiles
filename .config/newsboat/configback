@@ -1,8 +1,0 @@
-refresh-on-startup		yes
-cleanup-on-quit			yes
-confirm-mark-feed-read 	no
-
-color info white black
-color listfocus black blue
-
-macro m set browser "/usr/local/bin/mpv %u"; open-in-browser ; set browser firefox

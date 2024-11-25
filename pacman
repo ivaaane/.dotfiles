@@ -3,6 +3,7 @@ acpi
 alsa-firmware
 alsa-plugins
 alsa-utils
+ani-cli
 arandr
 arc-gtk-theme-eos
 archlinux-xdg-menu
@@ -82,6 +83,7 @@ haveged
 hdparm
 hugo
 hwdetect
+hyfetch
 i3-wm
 i3blocks
 i3lock
@@ -94,6 +96,7 @@ jfsutils
 jq
 kitty
 less
+libc++
 libdvdcss
 libgsf
 libopenraw
@@ -131,6 +134,7 @@ networkmanager-openvpn
 newsboat
 nfs-utils
 nilfs-utils
+ninja
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -149,6 +153,7 @@ papirus-icon-theme
 pavucontrol
 perl
 picom
+pinta
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
@@ -159,6 +164,7 @@ polkit-gnome
 polybar
 poppler-glib
 power-profiles-daemon
+pridefetch
 protobuf
 python
 python-capng
@@ -181,7 +187,6 @@ rust-analyzer
 s-nail
 scrot
 sg3_utils
-smartmontools
 sof-firmware
 steam
 subversion
@@ -213,6 +218,7 @@ welcome
 wget
 which
 wireplumber
+wmctrl
 wpa_supplicant
 xarchiver
 xbindkeys

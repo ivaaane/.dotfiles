@@ -67,5 +67,5 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id unclutter --timeout 2 --start-hidden &
 exec --no-startup-id polybar
-exec_always ~/.config/i3/scripts/wallpaper.sh
 exec --no-startup-id newsboat -x reload
+exec --no-startup-id feh --bg-fill ~/.local/share/wallpapers/castle.png

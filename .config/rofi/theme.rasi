@@ -12,8 +12,8 @@ configuration {
   padding: 0;
   spacing: 0;
 
-  bg: #1e1e2ebb;
-  fg: #f38ba8;
+  bg: #1b2021bb;
+  fg: #b8bb26;
 
   background-color: transparent;
   text-color: @fg;
