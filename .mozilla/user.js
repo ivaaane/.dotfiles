@@ -1,9 +1,7 @@
 user_pref("_user.js.parrot", "START: Oh yes, the Norwegian Blue... what's wrong with it?");
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("_user.js.parrot", "0100 syntax error: the parrot's dead!");
-user_pref("browser.startup.page", 0);
-user_pref("browser.startup.homepage", "about:blank");
-user_pref("browser.newtabpage.enabled", false);
+// user_pref("browser.startup.homepage", "about:home");
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
 user_pref("_user.js.parrot", "0200 syntax error: the parrot's definitely deceased!");
 user_pref("_user.js.parrot", "0300 syntax error: the parrot's not pinin' for the fjords!");

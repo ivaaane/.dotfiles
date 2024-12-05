@@ -5,12 +5,11 @@ apps_arr=(
     "  kitty"
     "  steam"
     "󰙯  vesktop"
-    "󰍳  minetest"
-    "󰘸  anki"
+    "󰍳  luanti"
     "  thunar"
     "󰺵  retroarch"
-    "  oneko"
-    "󰏫  pinta"
+    "  pinta"
+    "  zathura"
 )
 
 apps=$(printf '%s\n' "${apps_arr[@]}" | sort)

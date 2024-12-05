@@ -1,0 +1,100 @@
+* {
+  font-family: "Source Code Pro Medium", monospace !important;
+  border-radius: 0px !important;
+}
+
+:root {
+  --window-colour: #1d2021;
+  --secondary-colour: #282828;
+  --inverted-colour: #ebdbb2;
+  --uc-theme-colour: var(--window-colour);
+  --uc-hover-colour: var(--secondary-colour);
+  --uc-border-radius: 0;
+}
+
+#PanelUI-menu-button,
+#unified-extensions-button,
+#back-button,
+#forward-button,
+#stop-button,
+#reload-button,
+#star-button,
+#home-button,
+#urlbar-zoom-button,
+#reader-mode-button,
+#tracking-protection-icon-container,
+#identity-permission-box,
+.tab-secondary-label,
+#pageActionButton,
+#page-action-buttons {
+  display: none !important;
+}
+
+#tabbrowser-arrowscrollbox {
+  --uc-layout-pack: center;
+}
+
+#tabbar {
+    margin: 0 !important;
+}
+
+.tabbrowser-tab {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#navigator-toolbox {
+  display: flex;
+  flex-direction: column-reverse !important;
+}
+
+#urlbar {
+  order: 1 !important;
+}
+
+#TabsToolbar {
+  order: 0 !important;
+}
+
+window, #main-window, #toolbar-menubar, #TabsToolbar, #PersonalToolbar, 
+#navigator-toolbox, #sidebar-box, #nav-bar {
+  -moz-appearance: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: var(--uc-theme-colour) !important;
+}
+
+#nav-bar {
+  background: transparent !important;
+}
+
+#urlbar, #urlbar * {
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab > .tab-stack > .tab-background {
+  background: var(--uc-theme-colour) !important;
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab[selected] > .tab-stack > .tab-background {
+  background: var(--uc-hover-colour) !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: none !important;
+}
+
+.urlbarView-row:hover > .urlbarView-row-inner,
+.urlbarView-row[selected] > .urlbarView-row-inner {
+  background: var(--uc-hover-colour) !important;
+}
+
+.identity-color-blue { --identity-tab-color: #2D4F67; }
+.identity-color-turquoise { --identity-tab-color: #7E9CD8; }
+.identity-color-green { --identity-tab-color: #98BB6C; }
+.identity-color-yellow { --identity-tab-color: #FF9E3B; }
+.identity-color-orange { --identity-tab-color: #FFA066; }
+.identity-color-red { --identity-tab-color: #FF5D62; }
+.identity-color-pink { --identity-tab-color: #D27E99; }
+.identity-color-purple { --identity-tab-color: #957FB8; }

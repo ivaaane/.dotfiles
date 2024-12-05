@@ -13,7 +13,7 @@ configuration {
   spacing: 0;
 
   bg: #1b2021bb;
-  fg: #b8bb26;
+  fg: #98971a;
 
   background-color: transparent;
   text-color: @fg;

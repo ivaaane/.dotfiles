@@ -6,7 +6,6 @@ vim.call('plug#begin')
 Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('windwp/nvim-autopairs')
-Plug('lukas-reineke/indent-blankline.nvim')
 Plug('ellisonleao/gruvbox.nvim')
 Plug('folke/zen-mode.nvim')
 Plug('nvim-neo-tree/neo-tree.nvim')
@@ -27,7 +26,6 @@ vim.opt.spelllang = "es"
 -- require
 require('lualine').setup()
 require('nvim-autopairs').setup({})
-require('ibl').setup()
 require('neo-tree').setup({})
 require('gruvbox').setup({
     contrast = 'hard',
@@ -35,7 +33,7 @@ require('gruvbox').setup({
 require("zen-mode").setup({
     window = {
         height = function()
-            return vim.api.nvim_win_get_height(0) - 2
+            return vim.api.nvim_win_get_height(0) - 1
         end,
         width = 0.5,
         options = {
@@ -52,9 +50,10 @@ require("zen-mode").setup({
 
 -- colors
 vim.cmd('colorscheme gruvbox')
---vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
---vim.api.nvim_set_hl(0, 'LineNr', { bg = 'NONE', fg = 'gray' })
---vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'LineNr', { bg = 'NONE', fg = 'gray' })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, "ZenBg", { ctermbg = 0 })
 
 -- keymappin'
 vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })
