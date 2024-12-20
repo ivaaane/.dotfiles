@@ -1,12 +1,12 @@
 # a!
-font pango: Noto Sans Regular 10
+font pango: JetBrains Mono Medium 10
 set $mod Mod4
 workspace_layout default
 
 # Window
 for_window [class=".*"] border pixel 0
-gaps inner 10
-gaps outer 0
+gaps inner 7
+gaps outer -7
 floating_modifier $mod
 focus_follows_mouse no
 
@@ -43,7 +43,8 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 bindsym $mod+w exec --no-startup-id firefox
-bindsym $mod+e exec --no-startup-id ~/.config/rofi/launch.sh
+bindsym $mod+e exec --no-startup-id ~/.config/rofi/launch.lua software
+bindsym $mod+s exec --no-startup-id ~/.config/rofi/launch.lua steam
 bindsym Print exec --no-startup-id scrot ~/downloads/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
 
 # Workspaces
@@ -67,5 +68,5 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id unclutter --timeout 2 --start-hidden &
 exec --no-startup-id polybar
-exec --no-startup-id newsboat -x reload
+exec --no-startup-id pkill newsboat && newsboat -x reload
 exec --no-startup-id feh --bg-fill ~/.local/share/wallpapers/castle.png

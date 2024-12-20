@@ -8,20 +8,17 @@
     "kernel",
     "uptime",
     "display",
-    "break",
     "packages",
     "shell",
     "de",
     "wm",
     "terminal",
     "terminalfont",
-    "break",
     "cpu",
     "gpu",
     "memory",
     "disk",
     "localip",
-    "break",
     "colors"
   ]
 }
