@@ -3,7 +3,8 @@ local Plug = vim.fn['plug#']
 
 -- plugins
 vim.call('plug#begin')
-Plug('beauwilliams/statusline.lua')
+Plug('nvim-lualine/lualine.nvim')
+Plug('nvim-tree/nvim-web-devicons')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('windwp/nvim-autopairs')
 Plug('ellisonleao/gruvbox.nvim')
@@ -22,6 +23,7 @@ vim.opt.spelllang = "es"
 -- require
 require('nvim-autopairs').setup({})
 require('gruvbox').setup({ contrast = 'hard', })
+require('lualine').setup({})
 require("zen-mode").setup({
     window = {
         height = function()

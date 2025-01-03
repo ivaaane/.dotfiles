@@ -5,8 +5,14 @@ workspace_layout default
 
 # Window
 for_window [class=".*"] border pixel 0
-gaps inner 7
-gaps outer -7
+gaps inner 0
+gaps outer 0
+
+client.focused          #4C7899 #285577 #ffffff
+client.unfocused        #333333 #5f676a #ffffff
+client.focused_inactive #888888 #5f676a #ffffff
+client.urgent           #2f343a #900000 #ffffff
+
 floating_modifier $mod
 focus_follows_mouse no
 
@@ -33,25 +39,31 @@ bindsym $mod+Shift+Left resize shrink width 10 px
 bindsym $mod+Shift+Right resize grow width 10 px
 bindsym $mod+Shift+Up resize grow height 10 px
 bindsym $mod+Shift+Down resize shrink height 10 px
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 1%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 1%-
-bindsym XF86AudioMute exec --no-startup-id amixer set Master 0%
+bindsym XF86AudioRaiseVolume exec --no-startup-id volume.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id volume.sh down
+bindsym XF86AudioMute exec --no-startup-id volume.sh mute
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
+bindsym $mod+0 exec --no-startup-id /usr/local/bin/switch-audio-port
 bindsym $mod+w exec --no-startup-id firefox
-bindsym $mod+e exec --no-startup-id ~/.config/rofi/launch.lua software
-bindsym $mod+s exec --no-startup-id ~/.config/rofi/launch.lua steam
-bindsym Print exec --no-startup-id scrot ~/downloads/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
+bindsym $mod+e exec --no-startup-id ~/.config/rofi/launch.lua
+bindsym $mod+p exec --no-startup-id toggle_bar.sh
+bindsym Print exec --no-startup-id scrot ~/pics/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
 
 # Workspaces
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "0"
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -67,6 +79,4 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id unclutter --timeout 2 --start-hidden &
-exec --no-startup-id polybar
-exec --no-startup-id pkill newsboat && newsboat -x reload
-exec --no-startup-id feh --bg-fill ~/.local/share/wallpapers/castle.png
+exec --no-startup-id feh --bg-fill ~/.local/share/wallpapers/sunflowers.png

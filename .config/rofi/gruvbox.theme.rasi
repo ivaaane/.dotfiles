@@ -22,6 +22,11 @@ configuration {
 window {
     fullscreen: false;
     background-color: @bg;
+    location: west;
+    anchor: west;
+    width: 12.5%;
+    height: 100%;
+    orientation: horizontal;
 }
 
 mainbox {
@@ -44,8 +49,8 @@ prompt {
 }
 
 listview {
-  lines: 6;
-  columns: 2;
+  lines: 12;
+  columns: 1;
 }
 
 element {

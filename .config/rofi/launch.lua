@@ -1,7 +1,6 @@
 #!/bin/lua
 
---- lists ---
-local software = {
+local apps = {
     {'󰙯', 'vesktop', 'vesktop'},
     {'󰈹', 'firefox', 'firefox'},
     {'', 'kitty', "kitty"},
@@ -11,24 +10,10 @@ local software = {
     {'󰒍', 'packet tracer', "packettracer"},
     {'', 'zathura', "zathura"},
     {'󱚻', 'network manager', "kitty nmtui"},
-    {'󰏫', 'pixelorama', 'pixelorama'}
+    {'󰏫', 'pixelorama', 'pixelorama'},
+    {'', 'godot', 'godot'},
+    {'', 'virtualbox', 'virtualbox'}
 }
-local games = {
-    {'󱥋', 'stardew valley', 'steam steam://rungameid/413150'},
-    {'󱥚', 'worldbox', 'steam steam://rungameid/1206650'},
-    {'󱥼', 'luanti', 'luanti'},
-    {'󰷚', 'minesweeper', 'gnome-mines'},
-    {'󱤗', 'terraria', 'steam steam://rungameid/105600'}
-}
---- ---
-
-local args = {...}
-local apps
-if args[1] == 'software' then
-    apps = software
-else
-    apps = games
-end
 
 table.sort(apps, function(a, b)
     return a[2] < b[2]

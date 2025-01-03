@@ -21,7 +21,7 @@ set -gx GLFW_IM_MODULE ibus
 
 
 alias grep='grep --color=auto'
-alias ls='eza -T --icons --group-directories-first -I ".git" --git-ignore -L2'
+alias ls='tree -L2 -F --gitignore --dirsfirst'
 alias clear='printf "\033[3J\033[H\033[2J"'
 alias rmd='rm -rf'
 alias icat='kitten icat --align left'
@@ -31,15 +31,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 function fish_greeting
-	echo "> today is $(set_color yellow)$(shirecal)$(set_color normal)."
-	echo "> the moon is in $(set_color magenta)$(moon-phases | awk \
-        '{print tolower($0)}')$(set_color normal) phase $(moon-phases \
-        --text-emoji)  $(moon-phases -z -t)"
-    echo "> it's been $(set_color green)$(daysago 2020-3-14)$(set_color \
-        normal) days since the quarantine started."
-    echo "> there are $(set_color red)$(newsboat \
-        -x print-unread)$(set_color normal) in your feed."
-	fortune | cowsay -f ~/.local/share/cowsay/kisa.cow -W 55
 end
 
 fish_vi_key_bindings
@@ -60,10 +51,14 @@ function fish_prompt
     end
 
 	printf '\e[1 q'
-	printf '%s%s ❱ %s' \
-		(set_color black)(prompt_pwd) \
+	printf '%s%s ❯ %s' \
+		(set_color brblack)(prompt_pwd) \
 		(set_color $mode_color) \
 		(set_color normal)
+end
+
+if not set -q TMUX
+    tmux
 end
 
 if not status is-interactive
