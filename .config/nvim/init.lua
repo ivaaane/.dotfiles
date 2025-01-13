@@ -9,6 +9,8 @@ Plug('nvim-treesitter/nvim-treesitter')
 Plug('windwp/nvim-autopairs')
 Plug('ellisonleao/gruvbox.nvim')
 Plug('folke/zen-mode.nvim')
+Plug('christoomey/vim-tmux-navigator')
+Plug('andweeb/presence.nvim')
 vim.call('plug#end')
 
 -- options

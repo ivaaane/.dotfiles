@@ -1,22 +1,13 @@
-# a!
-font pango: JetBrains Mono Medium 10
-set $mod Mod4
-workspace_layout default
-
 # Window
+font pango: JetBrains Mono Medium 10
+workspace_layout default
 for_window [class=".*"] border pixel 0
 gaps inner 0
 gaps outer 0
-
-client.focused          #4C7899 #285577 #ffffff
-client.unfocused        #333333 #5f676a #ffffff
-client.focused_inactive #888888 #5f676a #ffffff
-client.urgent           #2f343a #900000 #ffffff
-
-floating_modifier $mod
 focus_follows_mouse no
 
 # Keybindings
+set $mod Mod4
 bindsym $mod+Return exec --no-startup-id kitty
 bindsym $mod+q kill
 bindsym $mod+Shift+c reload
@@ -47,11 +38,9 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym $mod+0 exec --no-startup-id /usr/local/bin/switch-audio-port
-bindsym $mod+w exec --no-startup-id firefox
-bindsym $mod+e exec --no-startup-id ~/.config/rofi/launch.lua
-bindsym $mod+p exec --no-startup-id toggle_bar.sh
-bindsym Print exec --no-startup-id scrot ~/pics/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
+bindsym $mod+w exec --no-startup-id ~/.config/rofi/launch.lua
+bindsym $mod+p exec --no-startup-id bar mode toggle
+bindsym Print exec --no-startup-id scrot --select ~/pics/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
 
 # Workspaces
 set $ws1 "1"
@@ -63,20 +52,24 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws0 "0"
-
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # Autostart
 exec --no-startup-id xrandr --output eDP-1 --mode 1600x900
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id setxkbmap es -option caps:ctrl_modifier
-exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id xset s 480 dpms 600 600 600
-exec --no-startup-id /usr/bin/dunst
+exec --no-startup-id setxkbmap es -option caps:ctrl_modifier
+
+exec --no-startup-id kitty
 exec --no-startup-id unclutter --timeout 2 --start-hidden &
+exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id feh --bg-fill ~/.local/share/wallpapers/sunflowers.png

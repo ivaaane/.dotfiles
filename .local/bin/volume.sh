@@ -9,6 +9,8 @@
 # https://github.com/dastorm/volume-notification-dunst/blob/master/volume.sh
 # https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a
 
+# SCRIPT DRASTICALLY MODIFIED BY @ivaaane !!
+
 function get_volume {
   amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
 }
@@ -30,20 +32,15 @@ function send_notification {
 
 case $1 in
   up)
-    # set the volume on (if it was muted)
-    amixer -D pulse set Master on > /dev/null
-    # up the volume (+ 5%)
     amixer -D pulse sset Master 1%+ > /dev/null
     send_notification
     ;;
   down)
-    amixer -D pulse set Master on > /dev/null
     amixer -D pulse sset Master 1%- > /dev/null
     send_notification
     ;;
   mute)
-    # toggle mute
-    amixer -D pulse set Master 1+ toggle > /dev/null
+    amixer -D pulse sset Master 0% > /dev/null
     send_notification
     ;;
 esac

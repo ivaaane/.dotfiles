@@ -11,7 +11,6 @@ local apps = {
     {'', 'zathura', "zathura"},
     {'󱚻', 'network manager', "kitty nmtui"},
     {'󰏫', 'pixelorama', 'pixelorama'},
-    {'', 'godot', 'godot'},
     {'', 'virtualbox', 'virtualbox'}
 }
 

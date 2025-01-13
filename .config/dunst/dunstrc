@@ -67,12 +67,12 @@
 [urgency_low]
     background = "#1d2021"
     foreground = "#ebdbb2"
-    timeout = 5
+    timeout = 2
     icon = /usr/share/icons/Qogir/16/status/package-installed-outdated.svg
 [urgency_normal]
     background = "#1d2021"
     foreground = "#ebdbb2"
-    timeout = 5
+    timeout = 2
     icon = /usr/share/icons/Qogir/16/emblems/emblem-question.svg
 [urgency_critical]
     background = "#1d2021"
