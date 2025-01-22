@@ -23,10 +23,10 @@ function send_notification {
   iconSound="audio-volume-high"
   iconMuted="audio-volume-muted"
   if is_mute ; then
-    dunstify -i $iconMuted -r 2593 -u normal "mute"
+    dunstify -i $iconMuted -r 2593 -u low "mute"
   else
     volume=$(get_volume)
-    dunstify -i $iconSound -r 2593 -u normal "$volume%"
+    dunstify -i $iconSound -r 2593 -u low "$volume%"
   fi
 }
 

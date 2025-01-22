@@ -4,13 +4,15 @@ local Plug = vim.fn['plug#']
 -- plugins
 vim.call('plug#begin')
 Plug('nvim-lualine/lualine.nvim')
-Plug('nvim-tree/nvim-web-devicons')
 Plug('nvim-treesitter/nvim-treesitter')
 Plug('windwp/nvim-autopairs')
 Plug('ellisonleao/gruvbox.nvim')
 Plug('folke/zen-mode.nvim')
 Plug('christoomey/vim-tmux-navigator')
+Plug('nvim-telescope/telescope.nvim')
 Plug('andweeb/presence.nvim')
+Plug('nvim-tree/nvim-web-devicons')
+Plug('nvim-lua/plenary.nvim')
 vim.call('plug#end')
 
 -- options
@@ -61,3 +63,4 @@ vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'z', 'z=', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-p>', ':w<CR>:!love .<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'ff', ':Telescope find_files<CR>', { noremap = true, silent = true})

@@ -6,8 +6,8 @@
 	--urlbar-focused-bg-color: #282828;
 	--urlbar-not-focused-bg-color: #1c1b22;
 	--toolbar-bgcolor: #282828 !important;
-	--tab-font: 'JetBrains Mono Medium';
-	--urlbar-font: 'JetBrains Mono Medium';
+	--tab-font: 'JetBrains Mono';
+	--urlbar-font: 'JetBrains Mono';
 
 	/* try increasing if you encounter problems */
 	--urlbar-height-setting: 24px;

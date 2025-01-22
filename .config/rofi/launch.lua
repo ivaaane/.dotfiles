@@ -6,12 +6,11 @@ local apps = {
     {'', 'kitty', "kitty"},
     {'', 'steam', "steam"},
     {'', 'thunar', "thunar"},
-    {'󰺵', 'retroarch', "retroarch"},
     {'󰒍', 'packet tracer', "packettracer"},
     {'', 'zathura', "zathura"},
     {'󱚻', 'network manager', "kitty nmtui"},
-    {'󰏫', 'pixelorama', 'pixelorama'},
-    {'', 'virtualbox', 'virtualbox'}
+    {'󰏫', 'aseprite', 'aseprite'},
+    {'', 'qutebrowser', 'qutebrowser'},
 }
 
 table.sort(apps, function(a, b)

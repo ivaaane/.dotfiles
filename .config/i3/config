@@ -1,5 +1,5 @@
 # Window
-font pango: JetBrains Mono Medium 10
+font pango: JetBrains Mono Medium 8
 workspace_layout default
 for_window [class=".*"] border pixel 0
 gaps inner 0
@@ -9,6 +9,8 @@ focus_follows_mouse no
 # Keybindings
 set $mod Mod4
 bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+o exec --no-startup-id qutebrowser
+bindsym $mod+w exec --no-startup-id ~/.config/rofi/launch.lua
 bindsym $mod+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -38,8 +40,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym $mod+w exec --no-startup-id ~/.config/rofi/launch.lua
-bindsym $mod+p exec --no-startup-id bar mode toggle
 bindsym Print exec --no-startup-id scrot --select ~/pics/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
 
 # Workspaces
@@ -52,6 +52,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
+set $ws10 "10"
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -61,6 +62,7 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # Autostart
 exec --no-startup-id xrandr --output eDP-1 --mode 1600x900
@@ -69,7 +71,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id setxkbmap es -option caps:ctrl_modifier
 
-exec --no-startup-id kitty
 exec --no-startup-id unclutter --timeout 2 --start-hidden &
-exec --no-startup-id /usr/bin/dunst
-exec --no-startup-id feh --bg-fill ~/.local/share/wallpapers/sunflowers.png
+exec --no-startup-id dunst
+exec --no-startup-id conky
+exec --no-startup-id feh --bg-fill ~/.local/share/wallpapers/railway.jpg

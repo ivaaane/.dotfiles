@@ -2,13 +2,13 @@
     monitor = 0
     follow = none
 
-    height = 300
+    height = 500
     width = (0, 999)
 
-    origin = bottom-right
+    origin = center
     scale = 0
 
-    notification_limit = 5
+    notification_limit = 1
 
     progress_bar = true
     progress_bar_height = 10
@@ -58,7 +58,7 @@
     title = Dunst
     class = Dunst
 
-    corner_radius = 0
+    corner_radius = 1
 
     ignore_dbusclose = false
     per_monitor_dpi = false
@@ -67,13 +67,12 @@
 [urgency_low]
     background = "#1d2021"
     foreground = "#ebdbb2"
-    timeout = 2
+    timeout = 1
     icon = /usr/share/icons/Qogir/16/status/package-installed-outdated.svg
 [urgency_normal]
     background = "#1d2021"
     foreground = "#ebdbb2"
     timeout = 2
-    icon = /usr/share/icons/Qogir/16/emblems/emblem-question.svg
 [urgency_critical]
     background = "#1d2021"
     foreground = "#ebdbb2"
