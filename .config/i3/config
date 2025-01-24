@@ -68,6 +68,7 @@ bindsym $mod+0 workspace $ws10
 exec --no-startup-id xrandr --output eDP-1 --mode 1600x900
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id setxkbmap es -option caps:ctrl_modifier
 

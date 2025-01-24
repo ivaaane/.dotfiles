@@ -2,7 +2,7 @@
 
 local apps = {
     {'󰙯', 'vesktop', 'vesktop'},
-    {'󰈹', 'firefox', 'firefox'},
+    {'󰈹', 'librewolf', 'librewolf'},
     {'', 'kitty', "kitty"},
     {'', 'steam', "steam"},
     {'', 'thunar', "thunar"},
