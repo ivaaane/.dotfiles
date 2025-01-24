@@ -10,8 +10,7 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{w
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:133.0) Gecko/20100101 Firefox/133.0', 'https://accounts.google.com/*')
 
 c.content.autoplay = False
-c.content.cookies.accept = 'never'
-c.content.cookies.store = False
+c.content.cookies.accept = 'no-3rdparty'
 c.content.blocking.method = 'auto'
 c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt']
 c.content.notifications.enabled = False

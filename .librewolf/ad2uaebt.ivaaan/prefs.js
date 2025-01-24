@@ -9,10 +9,10 @@
 // - modify it via the UI (e.g. via about:config in the browser); or
 // - set it within a user.js file in your profile.
 
-user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1737657889);
-user_pref("app.update.lastUpdateTime.browser-cleanup-thumbnails", 1737736529);
-user_pref("app.update.lastUpdateTime.services-settings-poll-changes", 1737657889);
-user_pref("app.update.lastUpdateTime.xpi-signature-verification", 1737657889);
+user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1737748815);
+user_pref("app.update.lastUpdateTime.browser-cleanup-thumbnails", 1737748815);
+user_pref("app.update.lastUpdateTime.services-settings-poll-changes", 1737748815);
+user_pref("app.update.lastUpdateTime.xpi-signature-verification", 1737748815);
 user_pref("browser.bookmarks.addedImportButton", true);
 user_pref("browser.bookmarks.restore_default_bookmarks", false);
 user_pref("browser.contentblocking.category", "strict");
@@ -40,11 +40,11 @@ user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.url", "");
 user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
-user_pref("browser.search.totalSearches", 21);
+user_pref("browser.search.totalSearches", 22);
 user_pref("browser.sessionstore.upgradeBackup.latestBuildID", "20250118201320");
-user_pref("browser.shell.mostRecentDateSetAsDefault", "1737737070");
+user_pref("browser.shell.mostRecentDateSetAsDefault", "1737748786");
 user_pref("browser.startup.couldRestoreSession.count", 2);
-user_pref("browser.startup.lastColdStartupCheck", 1737737070);
+user_pref("browser.startup.lastColdStartupCheck", 1737748786);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
 user_pref("browser.translations.enable", false);
 user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[\"_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"idcac-pub_guus_ninja-browser-action\",\"7esoorv3_alefvanoon_anonaddy_me-browser-action\"],\"nav-bar\":[\"back-button\",\"forward-button\",\"customizableui-special-spring1\",\"urlbar-container\",\"customizableui-special-spring2\",\"save-to-pocket-button\",\"downloads-button\",\"fxa-toolbar-menu-button\",\"unified-extensions-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"alltabs-button\"],\"vertical-tabs\":[],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"]},\"seen\":[\"developer-button\",\"ublock0_raymondhill_net-browser-action\",\"idcac-pub_guus_ninja-browser-action\",\"7esoorv3_alefvanoon_anonaddy_me-browser-action\",\"_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action\"],\"dirtyAreaCache\":[\"nav-bar\",\"vertical-tabs\",\"PersonalToolbar\",\"toolbar-menubar\",\"TabsToolbar\",\"unified-extensions-area\"],\"currentVersion\":20,\"newElementCount\":4}");
@@ -64,13 +64,13 @@ user_pref("distribution.iniFile.exists.value", true);
 user_pref("distribution.io.gitlab.librewolf-community.bookmarksProcessed", true);
 user_pref("dom.forms.autocomplete.formautofill", true);
 user_pref("dom.private-attribution.submission.enabled", false);
-user_pref("dom.push.userAgentID", "adcf3ace5d7745318efca398b461a2d0");
+user_pref("dom.push.userAgentID", "5de1c42d71394429adc1caec37181738");
 user_pref("dom.security.https_only_mode_ever_enabled", true);
 user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
 user_pref("extensions.blocklist.pingCountVersion", 0);
 user_pref("extensions.databaseSchema", 37);
 user_pref("extensions.formautofill.creditCards.reauth.optout", "MDIEEPgAAAAAAAAAAAAAAAAAAAEwFAYIKoZIhvcNAwcECGHFzvy/cxy0BAirygwcvNSu7Q==");
-user_pref("extensions.getAddons.cache.lastUpdate", 1737657889);
+user_pref("extensions.getAddons.cache.lastUpdate", 1737748815);
 user_pref("extensions.getAddons.databaseSchema", 6);
 user_pref("extensions.lastAppBuildId", "20250118201320");
 user_pref("extensions.lastAppVersion", "134.0.1-1");
@@ -138,7 +138,7 @@ user_pref("signon.management.page.os-auth.optout", "MDIEEPgAAAAAAAAAAAAAAAAAAAEw
 user_pref("storage.vacuum.last.index", 0);
 user_pref("storage.vacuum.last.places.sqlite", 1737735668);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-user_pref("toolkit.startup.last_success", 1737737069);
+user_pref("toolkit.startup.last_success", 1737748784);
 user_pref("toolkit.telemetry.cachedClientID", "42e2d74b-794d-4c2a-bfba-273e6e25c6c8");
 user_pref("toolkit.telemetry.cachedProfileGroupID", "1e7aea67-dd4a-4da4-8ef5-f6cfd3767545");
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
