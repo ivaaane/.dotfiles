@@ -1,0 +1,67 @@
+configuration {
+  font: "JetBrains Mono Medium 10";
+  disable-history: true;
+  dmenu {
+    display-name: "";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg: #1b2021;
+  fg: #d79921;
+
+  background-color: transparent;
+  text-color: @fg;
+}
+
+window {
+    fullscreen: false;
+    background-color: @bg;
+    location: west;
+    anchor: west;
+    width: 12.5%;
+    height: 100%;
+    orientation: horizontal;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: transparent;
+  children: [prompt, entry];
+}
+
+entry {
+  background-color: transparent;
+  padding: 12px 3px;
+}
+
+prompt {
+  background-color: transparent;
+  padding: 12px 16px 12px 12px;
+}
+
+listview {
+  lines: 12;
+  columns: 1;
+}
+
+element {
+  children: [element-text];
+}
+
+element-text {
+  padding: 10px;
+}
+
+element-text selected {
+  text-color: @bg;
+  background-color: @fg;
+}

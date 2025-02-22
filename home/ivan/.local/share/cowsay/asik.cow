@@ -1,0 +1,5 @@
+$the_cow = <<"EOC";
+   $thoughts   |__|__|
+    $thoughts (O O )-\\
+       v--v
+EOC
