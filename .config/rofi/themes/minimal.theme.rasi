@@ -1,0 +1,78 @@
+/*
+ * ROFI color theme
+ *
+ * Based on Something Found in the Internet
+ *
+ * User: Contributors
+ * Copyright: *!
+ *
+ * Modified by sieni
+ */
+
+listview {
+  lines: 5;
+}
+
+configuration {
+  font: "JetBrains Mono Nerd Font 12";
+
+  dmenu {
+    display-name: " ";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 1;
+  spacing: 0;
+  width: 10%;
+
+  bg: #000000;
+  bg-alt: #232323;
+  fg: #FFFFFF;
+  fg-alt: #424242;
+
+  background-color: @bg;
+  text-color: @fg;
+  border-color: @fg;
+}
+
+window {
+  transparency: "real";
+  border: 1;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+entry {
+  padding: 5px 0;
+}
+
+prompt {
+  padding: 5px;
+}
+
+element {
+  children: [element-text];
+}
+
+element-text {
+  padding: 5px;
+  text-color: @fg-alt;
+}
+
+element-text selected {
+  text-color: @fg;
+}

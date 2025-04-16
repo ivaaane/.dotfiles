@@ -1,0 +1,86 @@
+# Window
+font pango: JetBrains Mono 8
+workspace_layout default
+gaps inner 0
+gaps outer 0
+focus_follows_mouse no
+
+# Border
+for_window [class=".*"] border pixel 1
+hide_edge_borders both
+client.focused #ffffff #000000 #000000 #000000 #ffffff
+client.focused_inactive #000000 #000000 #000000 #000000 #000000
+client.unfocused #000000 #000000 #000000 #000000 #000000
+client.urgent #ffffff #000000 #000000 #000000 #ffffff
+client.placeholder #ffffff #000000 #000000 #000000 #ffffff
+
+# Keybindings
+set $mod Mod4
+floating_modifier Mod4
+bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+o exec --no-startup-id librewolf
+bindsym $mod+w exec --no-startup-id ~/.config/rofi/launch.lua
+bindsym $mod+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+b split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+n layout toggle split
+bindsym $mod+y exec --no-startup-id i3-msg open
+bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+Left resize shrink width 10 px
+bindsym $mod+Shift+Right resize grow width 10 px
+bindsym $mod+Shift+Up resize grow height 10 px
+bindsym $mod+Shift+Down resize shrink height 10 px
+bindsym XF86AudioRaiseVolume exec --no-startup-id volume.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id volume.sh down
+bindsym XF86AudioMute exec --no-startup-id volume.sh mute
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym Print exec --no-startup-id scrot --select ~/pics/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
+bindsym $mod+p scratchpad show
+bindsym $mod+Shift+p move scratchpad
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# Autostart
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id kitty tmux
+exec --no-startup-id unclutter --timeout 1 --start-hidden &
+exec --no-startup-id dunst
+exec --no-startup-id setxkbmap es -option caps:ctrl_modifier
+exec --no-startup-id xss-lock --transfer-sleep-lock -- lock.sh
+exec --no-startup-id feh --bg-fill ~/pics/wallpapers/lights.jpg
+exec --no-startup-id rm -rf ~/.cache
