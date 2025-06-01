@@ -1,16 +1,13 @@
 #!/bin/lua
 
 local apps = {
+    {'', '', ''},
+    {'󰏫', 'aseprite', 'aseprite &'},
     {'', 'discord', 'vesktop &'},
     {'', 'godot', 'godot &'},
-    {'󰏫', 'pixelorama', 'pixelorama &'},
+    {'', 'packet tracer', "packettracer &"},
     {'', 'steam', "steam &"},
-    {'', 'zathura', 'zathura &'},
 }
-
-table.sort(apps, function(a, b)
-    return a[2] < b[2]
-end)
 
 local rofi = {}
 for k, v in ipairs(apps) do

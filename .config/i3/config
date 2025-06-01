@@ -49,9 +49,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym Print exec --no-startup-id scrot --select ~/pics/screenshots/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved"
+bindsym Print exec --no-startup-id scrot --select ~/pics/screenshots/%Y-%m-%d-%T-screenshot.png && dunstify "Screenshot saved" -u low
 bindsym $mod+p scratchpad show
 bindsym $mod+Shift+p move scratchpad
+bindsym $mod+c exec --no-startup-id dunstify "Cache clean ($(du -sh ~/.cache | cut -f1))" -u low && rm -rf ~/.cache
 
 # Workspaces
 set $ws1 "1"
@@ -82,5 +83,6 @@ exec --no-startup-id unclutter --timeout 1 --start-hidden &
 exec --no-startup-id dunst
 exec --no-startup-id setxkbmap es -option caps:ctrl_modifier
 exec --no-startup-id xss-lock --transfer-sleep-lock -- lock.sh
-exec --no-startup-id feh --bg-fill ~/pics/wallpapers/lights.jpg
+exec --no-startup-id feh --bg-fill ~/pics/wallpapers/train.jpg
 exec --no-startup-id rm -rf ~/.cache
+exec --no-startup-id redlib

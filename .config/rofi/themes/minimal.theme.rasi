@@ -10,7 +10,7 @@
  */
 
 listview {
-  lines: 5;
+  lines: 1;
 }
 
 configuration {
