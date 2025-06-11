@@ -17,7 +17,7 @@ client.placeholder #ffffff #000000 #000000 #000000 #ffffff
 # Keybindings
 set $mod Mod4
 floating_modifier Mod4
-bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+o exec --no-startup-id librewolf
 bindsym $mod+w exec --no-startup-id ~/.config/rofi/launch.lua
 bindsym $mod+q kill
@@ -78,7 +78,7 @@ bindsym $mod+0 workspace $ws10
 
 # Autostart
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id kitty tmux
+exec --no-startup-id alacritty -e tmux
 exec --no-startup-id unclutter --timeout 1 --start-hidden &
 exec --no-startup-id dunst
 exec --no-startup-id setxkbmap es -option caps:ctrl_modifier

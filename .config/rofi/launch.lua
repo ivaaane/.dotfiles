@@ -2,9 +2,10 @@
 
 local apps = {
     {'', '', ''},
-    {'󰏫', 'aseprite', 'aseprite &'},
+    {'󰏭', 'aseprite', 'aseprite &'},
     {'', 'discord', 'vesktop &'},
     {'', 'godot', 'godot &'},
+    {'', 'krita', 'krita &'},
     {'', 'packet tracer', "packettracer &"},
     {'', 'steam', "steam &"},
 }

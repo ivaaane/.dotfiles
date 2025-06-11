@@ -16,10 +16,9 @@ set -gx XDG_DATA_HOME $HOME/.local/share
 set -gx XDG_STATE_HOME $HOME/.local/state
 set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx HISTFILE ~/.local/share/fish/fish_history
-set -gx HISTSIZE 1000
-set -gx HISTFILESIZE 1000
+set -gx HISTSIZE 10000
+set -gx HISTFILESIZE 10000
 set -gx LC_ALL en_US.UTF-8
-set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 set fish_cursor_default     block
 set fish_cursor_insert      block

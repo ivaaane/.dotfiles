@@ -8,6 +8,7 @@ Plug('windwp/nvim-autopairs')           -- autopair ""{}()[]
 Plug('folke/zen-mode.nvim')             -- focus mode for writing
 Plug('nvim-telescope/telescope.nvim')   -- file navigation
 Plug('christoomey/vim-tmux-navigator')  -- tmux integration
+Plug('ya2s/nvim-cursorline')            -- Cursor niceties
 Plug('nvim-lua/plenary.nvim')           -- dependency
 vim.call('plug#end')
 
@@ -23,6 +24,7 @@ vim.opt.spelllang = "es"
 
 -- require
 require('nvim-autopairs').setup({})
+
 require("zen-mode").setup({
     window = {
         height = function()
@@ -41,6 +43,19 @@ require("zen-mode").setup({
         }
     },
 })
+
+require('nvim-cursorline').setup {
+  cursorline = {
+    enable = true,
+    timeout = 100,
+    number = false,
+  },
+  cursorword = {
+    enable = true,
+    min_length = 3,
+    hl = { underline = true },
+  }
+}
 
 -- colors
 vim.cmd('colorscheme retrobox')
